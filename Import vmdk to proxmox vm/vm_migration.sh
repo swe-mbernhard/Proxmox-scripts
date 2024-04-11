@@ -72,7 +72,7 @@ echo "$vcpu vcpus"
 
 ## Q for VLAN
 
-read -p "Which vlan number?  " vlan
+read -p "Which vlan ID?  " vlan
 echo "VLAN $vlan"
 
 
