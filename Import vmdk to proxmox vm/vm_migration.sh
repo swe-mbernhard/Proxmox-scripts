@@ -18,10 +18,7 @@ fi
 echo "Stäng av VM:en i ESX som du vill migrera."
 echo "Se till att det finns backup för rollback till VMware"
 echo "VM namnet i VMware kan INTE innehålla mellanslag eller paranteser, citationstecken osv."
-#echo "Vad heter VM i ESX?"
-#read esxvmname
-#echo "Vilken ESXi host ligger den på? IP eller FQDN."
-#read esxhost
+
 echo -e "Vilket OS är den virtuella maskinen? (Default windows med SATA controller)\n\n  1. Windows 11/2022\n  2. Microsoft Windows 2008\n  3. Microsoft Windows 8/2012/2012r2\n  4. Microsoft Windows 10/2016/2019\n  5. Linux 2.6-6x kernel\n  6. Annat\n"
 read osinput
 if [ $osinput == '1' ]
@@ -53,16 +50,13 @@ echo "Default Windows 11/2022"
 ostypevar="win11"
 ostypename="Windows 11/2022"
 fi
-#ostypevar="ostype: $ostypevar"
+
 
 ##Fråga om namn
 read -p "Namn på VM som ska flyttas?  " vmname
 echo "Namn: $vmname"
 
 
-
-#pmcreatevmname="${vmname// /-}"
-#vmname="${vmname// /\ }"
 ## Fråga om RAM:
 
 read -p "Hur många GB RAM?  " RAM
@@ -88,8 +82,6 @@ vmpath=$vmpath_default
 else
 echo "$vmpath"
 fi
-
-
 
 nextid=$(pvesh get /cluster/nextid)
 
