@@ -59,10 +59,6 @@ fi
 read -p "What is the VM name in ESX?  " vmname
 echo "Namn: $vmname"
 
-
-
-#pmcreatevmname="${vmname// /-}"
-#vmname="${vmname// /\ }"
 ## Q for RAM:
 
 read -p "How many GB RAM?  " RAM
