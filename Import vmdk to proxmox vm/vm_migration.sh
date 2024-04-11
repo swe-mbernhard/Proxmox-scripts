@@ -15,8 +15,11 @@ if [ $dryrun -eq 1 ]
 then
 echo "DRYRUN - no changes will be made"
 fi
+
+echo "Make sure the ESX vm has virtio guest tools installed, and vmware tools uninstalled, and keep a record of the ip configuration of the host. Also make sure you have a local admin account."
 echo "Shut down the ESX VM you are about to migrate."
 echo "Make sure there is a good backup in VMware"
+
 echo "The VM name in ESX CANNOT contain spaces, parnthesises, dashes, quotation marks etc."
 
 echo -e "Which OS is the VM? (Default windows wtih SATA controller)\n\n  1. Windows 11/2022\n  2. Microsoft Windows 2008\n  3. Microsoft Windows 8/2012/2012r2\n  4. Microsoft Windows 10/2016/2019\n  5. Linux 2.6-6x kernel\n  6. Other\n"
