@@ -10,4 +10,11 @@ Change the vmbridge in the qm create command if another vm bridge is used.
 
 Prereqs:
 Shared folder between vmware and proxmox - i use NFS for this. 
+
 Dedicated hardware for proxmox in order to convert file to qcow2. 
+
+Virtio tools installed in source VM, and vmware tools uninstalled.
+
+IP config for the source VM
+
+Local admin account for the source VM
