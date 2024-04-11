@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+## This script creates a VM on proxmox and scans a shared datastore between esx and proxmox for disks with the name of the VM, and imports the disks into the created VM in proxmox
 starttime=$(date)
 echo $starttime
 dryrun=0
@@ -10,6 +11,8 @@ do
 done
 ## Set this to shared folder with access from esxi and proxmox
 vmpath_default="/mnt/pve/sharedfolder"
+
+
 
 if [ $dryrun -eq 1 ]
 then
@@ -163,6 +166,6 @@ else
 echo "Dryrun."
 fi
 echo "Install virtio drivers och tools to install the scsi driver, and change the disks to virtio scsi."
-
+echo "Please migrate the storage as soon as possible, and convert to qcow2 or RAW."
 endtime=$(date)
 echo $endtime
