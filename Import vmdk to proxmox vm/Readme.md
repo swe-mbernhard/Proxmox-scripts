@@ -4,6 +4,8 @@ This script creates a VM based on the answer of a few questions.
 
 When VM is created, some options are set, the vmdk files are MOVED from vmware datastore filestructure into proxmox vm filestructure, then the proxmox vm is scanned for disks
 
+Set the variable vmpath_default to the proxmox path of the shared folder. 
+
 Prereqs:
 Shared folder between vmware and proxmox - i use NFS for this. 
 Dedicated hardware for proxmox in order to convert file to qcow2. 
