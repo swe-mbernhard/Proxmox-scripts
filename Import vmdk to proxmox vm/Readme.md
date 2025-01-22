@@ -26,3 +26,7 @@ Virtio tools installed in source VM, and vmware tools uninstalled.
 IP config documentation for the source VM
 
 Local admin account for the source VM
+
+## Added a script to try to set ip via qemu agent in windows
+
+vm_migration_ip.sh
